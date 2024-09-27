@@ -7,15 +7,13 @@ The issue is that how to get the closer line from a point, from the given ones, 
 
 PostGIS:
 
- A-Q: 9.716835623285099e-05
-
- B-Q: 9.716835623092273e-05
+ - A-Q: 9.716835623285099e-05
+ - B-Q: 9.716835623092273e-05
 
 GEOS:
 
- A-Q: 9.7168356230588148e-05
-
- B-Q: 9.7168356230827946e-05
+ - A-Q: 9.7168356230588148e-05
+ - B-Q: 9.7168356230827946e-05
  
 So, for Postgis, B is the closer one, while for GEOS A is the closer one, the lines and points are so close that make it very hard to know which is the right answer, due to this there is a sample_perfect.py file, which runs all the computation steps in order to get the right result.
  
@@ -43,11 +41,9 @@ Do this needs to keep always numerators and denominators like this? the asnwer i
 
 So, let see the distance from the real value to each solution:
 
-Postgis: 1.279128170571242e-15
-
-GEOS:    0.9445433801422154e-15
-
-Playground: 0.22884797355737785e-15
+- Postgis:    1.279128170571242e-15
+- GEOS:       0.9445433801422154e-15
+- Playground: 0.22884797355737785e-15
 
 The result for the playground is same as GEOS, A is the closer one! and even has a lower error taking as reference the other options.
 
